@@ -10,7 +10,7 @@
 <body ng-controller="superHeroCtrl as vm">
   <input type="text" ng-model="searchBox">
 <div ng-repeat="hero in vm.heroes | filter:searchBox">
-  <p> {{hero.name}}</p>
+  <p ng-class= "hero.universe"> {{hero.name}}</p>
   <img ng-src="{{hero.img_url}}">
 </div>
 </body>
