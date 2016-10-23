@@ -10,8 +10,8 @@
 <body ng-controller="superHeroCtrl as vm">
   <input type="text" ng-model="searchBox">
 <div ng-repeat="hero in vm.heroes | filter:searchBox">
-  <p ng-class= "hero.universe"> {{hero.name}}</p>
-  <img ng-src="{{hero.img_url}}">
+  <p ng-class= "hero.universe"> {{hero.name}}</p><button ng-click="showImg = !showImg"></button>
+  <img ng-src="{{hero.img_url}}" ng-show="showImg">
 </div>
 </body>
 </html>

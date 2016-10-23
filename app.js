@@ -15,4 +15,7 @@ angular
   function heroController (){
     this.heroes = superHeroesData
     this.heroData = {}
+    function showImage($scope) {
+      $scope.showImg = false;
+    }
   }
