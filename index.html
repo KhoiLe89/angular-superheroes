@@ -10,8 +10,14 @@
 <body ng-controller="superHeroCtrl as vm">
   <input type="text" ng-model="searchBox">
 <div ng-repeat="hero in vm.heroes | filter:searchBox">
-  <p ng-class= "hero.universe"> {{hero.name}}</p><button ng-click="showImg = !showImg"></button>
+  <p ng-class= "hero.universe"> {{hero.name}}<button ng-click="showImg = !showImg"></button></p>
   <img ng-src="{{hero.img_url}}" ng-show="showImg">
 </div>
+<div>
+  Name:<input type="text" ng-model="vm.newHeroData.name">
+  Phone Number:<input type="text" ng-model="vm.newHeroData.phoneNumber">
+  Universe:<input type="text" ng-model="vm.newHeroData.universe">
+  Image:<input type="text" ng-model="vm.newHeroData.img_url">
+  <button ng-click="vm.newHero()">Add a New Hero </button>
 </body>
 </html>

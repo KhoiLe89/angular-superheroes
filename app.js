@@ -14,8 +14,9 @@ angular
 
   function heroController (){
     this.heroes = superHeroesData
-    this.heroData = {}
-    function showImage($scope) {
-      $scope.showImg = false;
+    this.newHeroData = {} //First I make an empty object, then let hero sets the items into the empty object.
+    this.newHero = function(){
+      let hero = {name: this.newHeroData.name, phoneNumber: this.newHeroData.phoneNumber, universe: this.newHeroData.universe, img_url: this.newHeroData.img_url}
+      this.heroes.push(hero) // then I push the object("hero") into the original array.
     }
   }
