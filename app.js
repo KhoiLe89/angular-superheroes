@@ -14,4 +14,5 @@ angular
 
   function heroController (){
     this.heroes = superHeroesData
+    this.heroData = {}
   }
